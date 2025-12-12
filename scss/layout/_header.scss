@@ -7,53 +7,164 @@
 
 .header {
     background: var(--header-bg-color);
+
+    @include abstracts.breakpoint(lg) {
+        box-shadow: 0 20px 60px 10px var(--header-shadow);
+    }
 }
 
 .top-bar {
     @extend %flexItemsCenter;
+    position: relative;
     padding: 30px 0;
 
     @include abstracts.breakpoint(lg) {
         padding: 20px 0;
     }
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(md) {
         justify-content: space-between;
         padding: 16px 0;
-    }
-
-    &__more {
-        display: none;
-
-        @include abstracts.breakpoint(lg) {
-            display: block;
-        }
     }
 }
 
 .navbar {
-    margin-left: 144px;
+    margin-left: 129px;
 
     @include abstracts.breakpoint(xl) {
-        margin-left: 50px;
+        margin-left: 28px;
     }
 
     @include abstracts.breakpoint(lg) {
+        position: fixed;
+        inset: 0 50% 0 0;
+        z-index: 9;
+
+        margin-left: 0;
+        border-radius: 0 20px 20px 0;
+        padding: 20px 0;
+        background: var(--sidebar-bg-color);
+
+        translate: -100%;
+        transition: translate 0.5s;
+
+        &.show {
+            translate: 0;
+            box-shadow: 0 40px 90px 20px var(--sidebar-shadow);
+        }
+
+        &.show ~ &__overlay {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    @include abstracts.breakpoint(sm) {
+        inset: 0 20% 0 0;
+    }
+
+    &__close-btn {
         display: none;
+
+        @include abstracts.breakpoint(lg) {
+            display: block;
+            padding: 10px 40px;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 0px 20px 10px;
+        }
+    }
+
+    &__overlay {
+        visibility: hidden;
+        opacity: 0;
+
+        @include abstracts.breakpoint(lg) {
+            position: fixed;
+            inset: 0;
+            z-index: 8;
+
+            background: rgba($color: #000000, $alpha: 0.4);
+
+            transition: opacity, visibility;
+            transition-duration: 0.5s;
+        }
     }
 
     &__list {
         @extend %flexItemsCenter;
-        column-gap: 30px;
+
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            height: calc(100% - 40px);
+            overscroll-behavior: contain;
+            overflow-y: auto;
+        }
+
+        @include abstracts.breakpoint(md) {
+            height: calc(100% - 140px);
+        }
+
+        @include abstracts.breakpoint(sm) {
+            height: calc(100% - 124px);
+        }
+    }
+
+    &__item {
+        &:hover .dropdown {
+            display: block;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+
+            &:hover .dropdown {
+                display: none;
+            }
+
+            &--active .dropdown {
+                display: block !important;
+            }
+        }
     }
 
     &__link {
         @extend %flexItemsCenter;
         gap: 6px;
+        height: 50px;
+        padding: 0 15px;
 
         font-size: 1.5rem;
         font-weight: 600;
         line-height: 2.2rem; /* 146.667% */
+
+        @include abstracts.breakpoint(lg) {
+            justify-content: space-between;
+            padding: 0 40px;
+
+            font-size: 1.6rem;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            height: 44px;
+            padding: 0px 20px;
+        }
+    }
+
+    &__arrow-icon {
+        margin-top: 3px;
+
+        @include abstracts.breakpoint(lg) {
+            rotate: -90deg;
+            transition: rotate, 0.3s;
+        }
+    }
+
+    &__item--active &__arrow-icon {
+        rotate: 0deg;
     }
 }
 
@@ -62,7 +173,7 @@
     margin-left: auto;
     gap: 20px;
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(md) {
         margin-left: 0;
     }
 
@@ -74,10 +185,6 @@
         height: 50px;
         background: var(--top-act-group-bg-color);
         box-shadow: 0 20px 60px 10px var(--top-act-group-shadow);
-
-        @include abstracts.breakpoint(md) {
-            display: none;
-        }
     }
 
     &__group--single {
@@ -122,5 +229,32 @@
         width: 100%;
         object-fit: cover;
         cursor: pointer;
+    }
+}
+
+.navbar-btn {
+    align-items: center;
+    height: 50px;
+    padding: 0 40px;
+
+    @include abstracts.breakpoint(sm) {
+        height: 44px;
+        padding: 0px 20px;
+    }
+
+    &__title,
+    &__qnt {
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 2.2rem; /* 146.667% */
+    }
+
+    &__title {
+        padding-left: 16px;
+    }
+
+    &__qnt {
+        margin-left: auto;
     }
 }

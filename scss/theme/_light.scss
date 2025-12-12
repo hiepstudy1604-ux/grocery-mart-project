@@ -1,20 +1,37 @@
 @use "../abstracts";
 
 html {
+    // base color variable
     --text-color: #1a162e;
-    --icon-color: brightness(0) saturate(100%) invert(9%) sepia(20%)
-        saturate(1720%) hue-rotate(210deg) brightness(93%) contrast(97%);
+    --text-hover-color: #0071dc;
+    --icon-color: brightness(0) saturate(100%) invert(9%) sepia(20%) saturate(1720%) hue-rotate(210deg) brightness(93%)
+        contrast(97%);
 
     // header color variable
     --header-bg-color: #eee;
+
+    @include abstracts.breakpoint(lg) {
+        --header-bg-color: #fff;
+        --header-shadow: rgba(237, 237, 246, 0.2);
+    }
+
+    // top act group color variable
     --top-act-group-bg-color: #fff;
     --top-act-group-separate-color: #ededf6;
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-user-avt-shadow: rgba(0, 0, 0, 0.08);
 
-    @include abstracts.breakpoint(lg) {
-        --header-bg-color: #fff;
-    }
+    // dropdown color variable
+    --dropdown-bg-color: #fff;
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg)
+        brightness(103%) contrast(101%);
+    --dropdown-shadow: rgba(200, 200, 200, 0.4);
+
+    --top-menu-border-color: #d2d1d6;
+
+    // sidebar
+    --sidebar-bg-color: #fff;
+    --sidebar-shadow: rgba(23, 28, 40, 0.4);
 
     // body color varriable
     --body-bg-color: #f6f6f6;
