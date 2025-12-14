@@ -10,10 +10,6 @@ html.dark {
     // header color variable
     --header-bg-color: #171c28;
 
-    @include abstracts.breakpoint(lg) {
-        --header-shadow: rgba(0, 0, 0, 0.2);
-    }
-
     // top act group color variable
     --top-act-group-bg-color: #292e39;
     --top-act-group-separate-color: #ededf6;
@@ -31,9 +27,13 @@ html.dark {
         brightness(102%) contrast(96%);
 
     // sidebar
-    --sidebar-bg-color: #292E39;
-    --sidebar-shadow: rgba(23, 28, 40, 0.40);
+    --sidebar-bg-color: #292e39;
+    --sidebar-shadow: rgba(23, 28, 40, 0.4);
 
     // body color varriable
     --body-bg-color: #292e39;
+
+    @include abstracts.screen(lg) {
+        --header-shadow: rgba(0, 0, 0, 0.2);
+    }
 }
