@@ -10,11 +10,6 @@ html {
     // header color variable
     --header-bg-color: #eee;
 
-    @include abstracts.breakpoint(lg) {
-        --header-bg-color: #fff;
-        --header-shadow: rgba(237, 237, 246, 0.2);
-    }
-
     // top act group color variable
     --top-act-group-bg-color: #fff;
     --top-act-group-separate-color: #ededf6;
@@ -29,10 +24,24 @@ html {
 
     --top-menu-border-color: #d2d1d6;
 
-    // sidebar
+    // sidebar color variable
     --sidebar-bg-color: #fff;
-    --sidebar-shadow: rgba(200, 200, 200, 0.40);
+    --sidebar-shadow: rgba(200, 200, 200, 0.4);
 
     // body color varriable
     --body-bg-color: #f6f6f6;
+
+    // category item color variable
+    --cate-item-bg-color: #eee;
+    --cate-item-thumb-bg-color: #fff;
+    --cate-item-title-color: #000;
+
+    @include abstracts.screen(lg) {
+        --header-bg-color: #fff;
+        --header-shadow: rgba(237, 237, 246, 0.2);
+    }
+
+    @include abstracts.screen(md) {
+        --cate-item-bg-color: #fff;
+    }
 }
