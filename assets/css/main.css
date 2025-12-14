@@ -1331,6 +1331,7 @@ html.dark {
 
 .navbar {
   margin-left: 129px;
+  z-index: 991;
 }
 @media (max-width: 1199.98px) {
   .navbar {
@@ -1570,6 +1571,7 @@ html.dark {
 .dropdown {
   position: absolute;
   left: 0;
+  z-index: 991;
   width: min(1240px, 100%);
   padding-top: 54px;
   display: none;

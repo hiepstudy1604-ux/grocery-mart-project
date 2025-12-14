@@ -30,6 +30,7 @@
 
 .navbar {
     margin-left: 129px;
+    z-index: 991;
 
     @include abstracts.screen(xl) {
         margin-left: 28px;
