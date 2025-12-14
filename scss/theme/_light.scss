@@ -36,6 +36,18 @@ html {
     --cate-item-thumb-bg-color: #fff;
     --cate-item-title-color: #000;
 
+    //product card color variable
+    --product-card-bg-color: #fff;
+    --product-card-shadow: rgba(237, 237, 246, 0.2);
+
+
+    // button color variable
+    --filter-btn-text-color: #6c6c72;
+    --filter-btn-bg-color: #fff;
+    --like-btn-bg-color: #fff;
+    --like-btn-shadow: rgba(124, 124, 124, 0.2);
+    
+
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
         --header-shadow: rgba(237, 237, 246, 0.2);
