@@ -38,6 +38,17 @@ html.dark {
     --cate-item-thumb-bg-color: #292e39;
     --cate-item-title-color: #fff;
 
+    //product card color variable
+    --product-card-bg-color: #171c28;
+    --product-card-shadow: rgba(0, 0, 0, 0.2);
+
+    // button color variable
+    --filter-btn-text-color: #fff;
+    --filter-btn-bg-color: #171c28;
+
+    --like-btn-bg-color: #292e39;
+    --like-btn-shadow: rgba(124, 124, 124, 0.2);
+
     @include abstracts.screen(lg) {
         --header-shadow: rgba(0, 0, 0, 0.2);
     }
