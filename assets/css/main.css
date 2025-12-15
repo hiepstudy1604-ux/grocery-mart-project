@@ -1969,8 +1969,8 @@ html.dark {
   background: #f8f8f8;
   font-size: 1.8rem;
   font-weight: 500;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
 }
 .btn + .btn {
   margin-left: 20px;
@@ -1981,7 +1981,7 @@ html.dark {
   font-weight: 400;
 }
 .btn--primary {
-  color: #1A162E;
+  color: #1a162e;
   background: var(--primary-color);
 }
 .btn--outline {
@@ -2284,13 +2284,13 @@ html.dark {
   padding: 0 30px;
 }
 .filter__content {
-  height: calc(100vh - 350px);
   overflow-y: auto;
   overscroll-behavior: contain;
 }
 @media (max-width: 1199.98px) {
   .filter__content {
     flex-direction: column;
+    height: calc(100vh - 350px);
   }
 }
 @media (max-width: 575.98px) {
