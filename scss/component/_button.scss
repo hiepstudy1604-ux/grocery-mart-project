@@ -48,8 +48,8 @@
 
     font-size: 1.8rem;
     font-weight: 500;
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
 
     + .btn {
         margin-left: 20px;
@@ -63,7 +63,7 @@
     }
 
     &--primary {
-        color: #1A162E;
+        color: #1a162e;
         background: var(--primary-color);
     }
 
