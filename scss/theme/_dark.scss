@@ -17,9 +17,9 @@ html.dark {
     --top-act-user-avt-shadow: rgba(0, 0, 0, 0.08);
 
     // dropdown color variable
-    --dropdown-bg-color: #292e39;
-    --dropdown-arrow-color: brightness(0) saturate(100%) invert(15%) sepia(29%) saturate(387%) hue-rotate(182deg)
-        brightness(97%) contrast(93%);
+    --dropdown-bg-color: #2f3441;
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg)
+        brightness(89%) contrast(88%);
     --dropdown-shadow: rgba(23, 28, 40, 0.4);
 
     --top-menu-border-color: #171c28;
@@ -41,6 +41,13 @@ html.dark {
     //product card color variable
     --product-card-bg-color: #171c28;
     --product-card-shadow: rgba(0, 0, 0, 0.2);
+
+    // filter form color variable
+    --filter-form-tag-bg-color: #171c28;
+    --filter-form-bg-color: #2f3441;
+    --filter-form-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg)
+        brightness(89%) contrast(88%);
+    --filter-form-shadow: rgba(0, 0, 0, 0.4);
 
     // button color variable
     --filter-btn-text-color: #fff;
