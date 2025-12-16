@@ -2,8 +2,10 @@
 
 html {
     // base color variable
+    --primary-color: #FFB700;
     --text-color: #1a162e;
     --text-hover-color: #0071dc;
+    --border-color: #d2d1d6;
     --icon-color: brightness(0) saturate(100%) invert(9%) sepia(20%) saturate(1720%) hue-rotate(210deg) brightness(93%)
         contrast(97%);
 
@@ -35,6 +37,22 @@ html {
     --cate-item-bg-color: #eee;
     --cate-item-thumb-bg-color: #fff;
     --cate-item-title-color: #000;
+
+    //product card color variable
+    --product-card-bg-color: #fff;
+    --product-card-shadow: rgba(237, 237, 246, 0.2);
+
+    // filter form color variable
+    --filter-form-tag-text-color: #9E9DA8;
+    --filter-form-tag-bg-color: #F8F8FB;
+    --filter-form-bg-color: #fff;
+    --filter-form-shadow: rgba(200, 200, 200, 0.4);
+
+    // button color variable
+    --filter-btn-text-color: #6c6c72;
+    --filter-btn-bg-color: #fff;
+    --like-btn-bg-color: #fff;
+    --like-btn-shadow: rgba(124, 124, 124, 0.2);
 
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
