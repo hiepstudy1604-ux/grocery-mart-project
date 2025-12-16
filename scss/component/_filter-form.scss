@@ -283,13 +283,12 @@
     }
 
     &__content {
-        height: calc(100vh - 350px);
-
         overflow-y: auto;
         overscroll-behavior: contain;
 
         @include abstracts.screen(xl) {
             flex-direction: column;
+            height: calc(100vh - 350px);
         }
 
         @include abstracts.screen(sm) {
